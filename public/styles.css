@@ -749,22 +749,6 @@ select {
   --tw-contain-style:  ;
 }
 
-.fixed {
-  position: fixed;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.top-0 {
-  top: 0px;
-}
-
-.-z-20 {
-  z-index: -20;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -828,6 +812,25 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.8);
   background-color: rgb(228 213 207 / 25%);
   box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-img img{
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  filter: blur(2rem);
 }
 
 .hover\:bg-white:hover {

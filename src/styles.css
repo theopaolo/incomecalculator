@@ -18,3 +18,20 @@ body {
     background-color: rgb(228 213 207 / 25%);
     box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 0.1);
 }
+
+.bg-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.bg-img img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(2rem);
+}
