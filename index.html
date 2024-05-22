@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Calculator</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <h2>Income Calculator</h2>
+    <div id="calculator">
+        <label>Work Days Per Week: <input type="number" id="work_days_per_week" value="5"></label>
+        <label>Vacation Days Per Year: <input type="number" id="vacation_days" value="20"></label>
+        <label>Monthly Fees: <input type="number" id="monthly_fees" value="250"></label>
+        <label>Desired Monthly Net Income: <input type="number" id="desired_monthly_net_income" value="3000"></label>
+        <label>Charge Rate: <input type="number" step="0.01" id="charge_rate" value="0.24"></label>
+        <button onclick="calculate()">Calculate</button>
+    </div>
+    <div id="results">
+        <p>Workable Days Per Year: <span id="workable_days_per_year_result"></span></p>
+        <p>Necessary Annual Turnover: <span id="necessary_annual_turnover_result"></span></p>
+        <p>Necessary Monthly Gross Income: <span id="necessary_monthly_gross_income_result"></span></p>
+        <p>Necessary Daily Gross Income: <span id="necessary_daily_gross_income_result"></span></p>
+    </div>
+    <script src="assets/app.js"></script>
+</body>
+</html>
