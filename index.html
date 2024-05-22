@@ -1,28 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr"></html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Income Calculator</title>
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
-    <link rel="stylesheet" href="assets/style.css">
+    <title>Calculateur de revenu</title>
+    <link rel="stylesheet" href="public/styles.css">
 </head>
 <body>
-    <h2>Income Calculator</h2>
-    <div id="calculator">
-        <label>Work Days Per Week: <input type="number" id="work_days_per_week" value="5"></label>
-        <label>Vacation Days Per Year: <input type="number" id="vacation_days" value="20"></label>
-        <label>Monthly Fees: <input type="number" id="monthly_fees" value="250"></label>
-        <label>Desired Monthly Net Income: <input type="number" id="desired_monthly_net_income" value="3000"></label>
-        <label>Charge Rate: <input type="number" step="0.01" id="charge_rate" value="0.24"></label>
-        <button onclick="calculate()">Calculate</button>
-    </div>
-    <div id="results">
-        <p>Workable Days Per Year: <span id="workable_days_per_year_result"></span></p>
-        <p>Necessary Annual Turnover: <span id="necessary_annual_turnover_result"></span></p>
-        <p>Necessary Monthly Gross Income: <span id="necessary_monthly_gross_income_result"></span></p>
-        <p>Necessary Daily Gross Income: <span id="necessary_daily_gross_income_result"></span></p>
-    </div>
-    <script src="assets/app.js"></script>
+    <section class="flex flex-col wrapper">
+        <h1 class="font-bold text-3xl">Calculateur de revenu</h1>
+
+        <div class="flex flex-col gap-4 mt-4" id="calculator">
+
+            <div class="flex gap-4">
+                <div class="flex flex-col">
+                    <label>Jours de travail par semaine</label>
+                    <input class="mt-2" type="number" id="work_days_per_week" value="5">
+                </div>
+                <div class="flex flex-col">
+                    <label>Jours de congé par an</label>
+                    <input class="mt-2" type="number" id="vacation_days" value="20">
+                </div>
+            </div>
+
+            <div class="flex gap-4">
+                <div class="flex flex-col">
+                    <label>Frais mensuels</label>
+                    <input class="mt-2" type="number" id="monthly_fees" value="250">
+                </div>
+                <div class="flex flex-col">
+                    <label>Revenu mensuel net souhaité</label>
+                    <input class="mt-2" type="number" id="desired_monthly_net_income" value="3000">
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <label>Charges sociales</label>
+                <input class="mt-2" type="number" step="0.01" id="charge_rate" value="0.24">
+            </div>
+
+            <button onclick="calculate()" class="border border-black p-2 px-4 hover:bg-white hover:text-black">Calculer</button>
+        </div>
+
+        <div id="results" class="flex flex-col mt-4">
+            <p>Jours travaillables par an : <span id="workable_days_per_year_result"></span></p>
+            <p>Chiffre d'affaires annuel nécessaire : <span id="necessary_annual_turnover_result"></span></p>
+            <p>Revenu brut mensuel nécessaire : <span id="necessary_monthly_gross_income_result"></span></p>
+            <p>Revenu brut journalier nécessaire : <span id="necessary_daily_gross_income_result"></span></p>
+        </div>
+    </section>
+    <script src="src/app.js"></script>
 </body>
 </html>

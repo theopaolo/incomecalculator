@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: grid;
+    place-content: center;
+    min-height: 100dvh;
+}
+
+.wrapper {
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(1rem);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: rgb(228 213 207 / 25%);
+    box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 0.1);
+}
